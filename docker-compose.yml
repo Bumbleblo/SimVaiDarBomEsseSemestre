@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+
+  dev:
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    volumes:
+    - "./app:/home"
+    ports:
+    - 8080:8080
