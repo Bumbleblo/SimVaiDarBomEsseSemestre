@@ -8,6 +8,7 @@ COPY docker/requirements.txt .
 
 RUN pip3 install --no-cache -r requirements.txt && rm requirements.txt
 
+ENV FELIPE 1
 COPY app/ .
 
 ENTRYPOINT ["python3", "manage.py"]

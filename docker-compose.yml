@@ -6,7 +6,10 @@ services:
     build:
       dockerfile: docker/Dockerfile
       context: .
-    volumes:
-    - "./app:/home"
     ports:
     - 8080:8080
+
+  get_token:
+    build:
+      dockerfile: docker/docker_token/Dockerfile
+      context: .
