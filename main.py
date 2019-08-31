@@ -12,6 +12,7 @@ class Logger:
         formatter = logging.Formatter(
             '[%(asctime)-15s][%(levelname)s] - %(message)s'
         )
+
         handler = logging.StreamHandler(sys.stdout)
         handler.setFormatter(formatter)
 
@@ -32,7 +33,7 @@ def verify_status_code(response, code = 200):
             f'Receive status code {response.status_code} not {code}\n{response.json()}'
         )
 
-API_PATH = 'http://dev:8080'
+API_PATH = 'http://localhost:8080'
 
 if __name__ == '__main__':
     
